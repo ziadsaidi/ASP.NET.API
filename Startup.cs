@@ -40,7 +40,7 @@ namespace Supermarket.API
             });
 
             services.AddAutoMapper(typeof (Startup));
-
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddSwaggerGen(c =>
